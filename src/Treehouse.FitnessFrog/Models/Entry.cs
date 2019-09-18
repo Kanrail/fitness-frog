@@ -1,5 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Web.ModelBinding;
+using System.Web.UI.WebControls;
 
 namespace Treehouse.FitnessFrog.Models
 {
@@ -89,6 +91,7 @@ namespace Treehouse.FitnessFrog.Models
         /// <summary>
         /// The notes for the entry.
         /// </summary>
+        [MaxLength(200, ErrorMessage= "The Notes field cannot be longer than 200 characters.")]
         public string Notes { get; set; }
     }
 }
